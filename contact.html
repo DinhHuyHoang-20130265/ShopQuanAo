@@ -48,6 +48,14 @@
         color: #707e89;
         font-size: 12px;
     }
+    .mapbox {
+        border-top: 1px solid #e8e9f1;
+        margin-top: 30px;
+        height: 350px;
+        overflow: hidden;
+        border: 10px solid #e5e5e5;
+        border-radius: 3px;
+    }
     form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
@@ -501,6 +509,12 @@
                         </form>
                     </div>
                 </div>
+                <div class="col-12">
+                  <h3 style="text-align: center; margin-top:30px;border-top:1px solid #333;padding-top:10px">Bản đồ cửa hàng</h3>
+                  <div class="mapbox">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.954111076736!2d106.7086283147493!3d10.81482379229551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175289741790d39%3A0x95362685e34cec2f!2zQuG6v24gWGUgTWnhu4FuIMSQw7RuZyDEkGluaCBC4buZIEzEqW5o!5e0!3m2!1svi!2s!4v1637980933100!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+              </div>
             </div>
         </div>
     </div>
@@ -607,5 +621,29 @@
   <script src="./assets/js/bootstrap.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/validator.js"></script>
+  <script>
+    Validator({
+        form: '#form-1',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+            Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ'),
+            Validator.isRequired('#email'),
+            Validator.isEmail('#email'),
+            Validator.minLength('#password', 6),
+            Validator.isRequired('#password_confirmation'),
+            Validator.isRequired('input[name="gender"]'),
+            Validator.isConfirmed('#password_confirmation', function () {
+                return document.querySelector('#form-1 #password').value;
+            }, 'Mật khẩu nhập lại không chính xác'),
+            Validator.isRequired('#noidung')
+        ],
+        onSubmit: function (data) {
+            // call api
+            console.log(data);
+        }
+    });
+</script>
 </body>
 </html>
