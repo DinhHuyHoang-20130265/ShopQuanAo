@@ -104,7 +104,7 @@ function tru(id) {
 }
 
 
-    function validate(evt) {
+function validate(evt) {
   var theEvent = evt || window.event;
 
   // Handle paste
