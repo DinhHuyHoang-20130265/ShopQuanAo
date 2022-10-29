@@ -85,6 +85,8 @@
 
 .nav-item__first-user:hover .nav-item__first-menu {
     display: block;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
 }
 
 .nav-item__first-img {
@@ -307,6 +309,9 @@
     color: var(--black-color);
     margin-right: 20px;
     position: relative;
+    transition-property: padding;
+    transition-duration: 0.1s;
+    transition-delay: 0.1s;
 }
 
 .header__second__like--icon {
@@ -314,6 +319,9 @@
     color: var(--black-color);
     margin-left: 10px;
     position: relative;
+    transition-property: padding;
+    transition-duration: 0.1s;
+    transition-delay: 0.1s;
 }
 
 .header__second__cart--icon:hover,
@@ -334,7 +342,11 @@
     top: -3px;
     right: -7px;
 }
-
+.mobile-main-menu .ul-first-menu li #header__second__like--notice {
+    position: inherit;
+    right: 0px;
+    top: 0px;
+} 
 .header__second__cart--notice {
     position: absolute;
     background-color: #d9121f;
@@ -576,7 +588,14 @@ ul .level1 li a:hover {
 ._body {
     font-size: 12px;
 }
-
+.body-two .row .col-4 h5 {
+    display: flex;
+    align-items: center;
+}
+.body-two .row {
+    display: flex;
+    align-items: center;
+}
 .ul-first-menu {
     flex: 1 1 auto;
     margin: 0;
@@ -1061,7 +1080,7 @@ ul .level1 li a:hover {
 .footer {
     border-top: 4px solid var(--black-color);
     margin-top: 50px;
-    padding-top: 12px;
+    padding-top: 30px;
 }
 
 .footer__heading {

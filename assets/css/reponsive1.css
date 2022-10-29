@@ -31,8 +31,31 @@ form.example::after {
     display: table;
 }
 
+.mega-content .row .col-4 {
+    text-align: center;
+}
+
 /* Mobile & tablet  */
 @media (max-width: 1023px) {}
+
+@media (max-width: 1200px) {
+    .mega-content .row .col-4 {
+        left: 20px;
+        max-width: 250px;
+        right: -50px;
+        display: flex;
+        align-items: center;
+        justify-content: content;
+    }
+
+    .mega-content .level0 {
+        min-width: 690px;
+    }
+
+    ul .level1 li a {
+        font-size: 13px;
+    }
+}
 
 /* tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -44,6 +67,7 @@ form.example::after {
     .card:hover .hover-icon {
         display: none;
     }
+
 }
 
 /* mobile */
@@ -66,7 +90,7 @@ form.example::after {
 }
 
 /* tablet */
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 740px) and (max-width: 992px) {
     .header {
         overflow: hidden;
         background-color: var(--white-color);
