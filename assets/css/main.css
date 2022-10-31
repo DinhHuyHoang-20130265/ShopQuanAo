@@ -741,7 +741,7 @@ ul .level1 li a:hover {
 
 .mobile-support li i {
     display: table-cell;
-    width: 20px;
+    /* width: 20px; */
 }
 
 .drawer-text-support {
