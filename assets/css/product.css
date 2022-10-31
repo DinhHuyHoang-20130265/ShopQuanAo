@@ -16,6 +16,10 @@
     font-size: 16px;
     list-style: none;
 }
+.product__filter-item .form-check-label .active{ 
+    border: 2px solid red;
+
+}
 .form-check-input {
     width: 18px;
     height: 18px;
@@ -148,6 +152,11 @@
     cursor: pointer;
 }
 
+.foo:active {
+  transform: scale(0.9);
+  background-color: #c33a7e;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
 .yellow {
     background: yellow;
 }
