@@ -1077,6 +1077,90 @@ ul .level1 li a:hover {
 }
 
 /* footer */
+.flexbox-alignItems-center {
+    display: flex;
+    /* justify-content: center; */
+    /* text-align: center; */
+}
+.emailWrp{
+    width: 400px;
+    margin-right: 175px;
+    margin-left: -20px;
+}
+
+.subWrp {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+
+.contact-form, .form-subrice {
+    display: flex;
+}
+
+
+h7 {
+    font-size: 20px;
+}
+
+.contactFormEmail, .subcrible {
+    display: inline-flex;
+    width: 72%;
+    height: 30px;
+    border-radius: 0;
+    outline: 0;
+    background: #d8d8d8;
+    color: #000;
+    border: 1px solid #fff;
+    font-size: 13px;
+}
+.findButton {
+    height: 30px;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    outline: 0;
+    -webkit-transition: background .25s ease,color .25s ease;
+    -moz-transition: background .25s ease,color .25s ease;
+    -ms-transition: background .25s ease,color .25s ease;
+    -o-transition: background .25s ease,color .25s ease;
+    transition: background .25s ease,color .25s ease;
+    position: relative;
+    border-left: 0;
+    width: 80px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.subcrible {
+    font-size: 15px;
+}
+@media only screen and (max-width: 767px) {
+    .box-email, .subWrp, .emailWrp {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .flexbox-alignItems-center {
+         display: flow-root;
+        justify-content: center;
+         text-align: left;
+        margin-left: -20px;
+    }
+    .subWrp, .emailWrp {
+        margin-left: 0px !important;
+    }
+}
+@media only screen and (max-width: 1080px) {
+    .box-email, .subWrp, .emailWrp {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .subWrp {
+        margin-left: -145px;
+    }
+}
 .footer {
     border-top: 4px solid var(--black-color);
     margin-top: 50px;
