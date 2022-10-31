@@ -11,10 +11,9 @@ $(document).ready(function() {
     $('.foo').click(function() {
         $(this).toggleClass('active');
     })
+    $('.sortby .dropdown-item').click(function() {
+        $('.sortby .dropdown-toggle').text($(this).text());
+        $('.sortby .dropdown-item').removeClass('isactive');
+        $(this).addClass('isactive');
+    });
 })
-
-function khonghienthidanhsach(id,cc){ 
-    $(`#${cc}`).toggle("slow");
-    $(`#plus-${id}`).toggleClass("hidden") 
-    $(`#minus-${id}`).toggleClass("hidden");    
-}

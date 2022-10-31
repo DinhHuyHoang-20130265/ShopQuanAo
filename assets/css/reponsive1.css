@@ -56,7 +56,16 @@ form.example::after {
         font-size: 13px;
     }
 }
-
+@media (max-width: 752px) {
+    .footer_toggle i {
+        display: block;
+    }
+}
+@media (min-width: 753px) {
+    .footer_toggle i {
+        display:none;
+    }
+}
 /* tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
     .owl-item {
