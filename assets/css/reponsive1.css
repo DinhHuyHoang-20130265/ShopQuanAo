@@ -186,7 +186,11 @@ form.example::after {
         margin-top: 10px;
     }
 }
-
+@media (min-width:1024px) and (max-width: 1199px) {
+    .owl-item {
+        width: 237.5px;
+    }
+}
 /* mobile */
 @media (max-width: 739px) {
     .checkdl1 {
