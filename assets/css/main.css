@@ -412,7 +412,12 @@
     max-height: 600px;
     overflow-y: auto;
 }
-
+.has-mega a i {
+    transition: transform 0.4s;
+}
+.has-mega:hover a i{
+    transform: rotate(90deg);
+}
 .has-mega:hover>.mega-content {
     display: block;
     opacity: 1;
@@ -1347,8 +1352,7 @@ h7 {
 }
 
 .main-img-2 img {
-    width: 370px;
-    max-height: auto;
+    width: 260px;
     position: absolute;
     top: 0;
     bottom: 0;

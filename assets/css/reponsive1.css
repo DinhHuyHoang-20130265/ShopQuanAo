@@ -59,6 +59,7 @@ form.example::after {
 @media (max-width: 752px) {
     .footer_toggle i {
         display: block;
+        transform: rotate(-90deg);
     }
 }
 @media (min-width: 753px) {
