@@ -53,8 +53,18 @@
   }
 
   /* Mobile & tablet  */
-  @media (max-width: 1023px) {}
-
+  @media (max-width: 1199px) {
+    .card-img-top {
+      width:202px !important;
+      height:130px !important;
+    }
+  }
+  @media (max-width: 991px) {
+    .card-img-top {
+      width:314px !important;
+      height:170px !important;
+    }
+  }
   /* tablet */
   @media (min-width: 740px) and (max-width: 1023px) {
     .owl-item {
@@ -725,7 +735,7 @@
                       <a href="./newDetail.html" class="product__new-item">
                         <div class="card" style="width: 100%">
                           <img class="card-img-top" src="./assets/imgNews/${newItem.imglink}-min.jpg" alt="Card image cap"
-                          style="width:245px !important; height:150px !important"  >
+                          style="width:247px; height:150px"  >
                           <div class="card-body">
                             <p style="font-size:12px"><i class="far fa-clock" style="margin-right:2px"></i>${newItem.date}</p>
                             <h5 class="card-title custom__name-product title-news">

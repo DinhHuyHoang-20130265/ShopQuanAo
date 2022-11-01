@@ -57,7 +57,9 @@
 .modal-body .body-one {
     display: flex;
 }
-
+.body-two .row {
+    height: 70px;
+}
 .modal-body .body-one p {
     font-weight: 700;
     text-transform: uppercase;
