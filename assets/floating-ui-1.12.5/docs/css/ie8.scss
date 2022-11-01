@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import '../libs/vars';
+@import '../_sass/libs/_vars';
 @import '../libs/functions';
 @import '../libs/mixins';
 @import '../libs/skel';
