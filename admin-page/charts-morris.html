@@ -99,7 +99,7 @@
                                     <footer>
                                         <ul>
                                             <li>
-                                                <a href=""> View All </a>
+                                                <a href=""> Xem tất cả </a>
                                             </li>
                                         </ul>
                                     </footer>
@@ -115,14 +115,14 @@
                                 </a>
                                 <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
                                     <a class="dropdown-item" href="#">
-                                        <i class="fa fa-user icon"></i> Profile </a>
+                                        <i class="fa fa-user icon"></i> Tài khoản </a>
                                     <a class="dropdown-item" href="#">
-                                        <i class="fa fa-bell icon"></i> Notifications </a>
+                                        <i class="fa fa-bell icon"></i> Thông báo </a>
                                     <a class="dropdown-item" href="#">
-                                        <i class="fa fa-gear icon"></i> Settings </a>
+                                        <i class="fa fa-gear icon"></i> Cài đặt </a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="login.html">
-                                        <i class="fa fa-power-off icon"></i> Logout </a>
+                                        <i class="fa fa-power-off icon"></i> Đăng xuất </a>
                                 </div>
                             </li>
                         </ul>
@@ -292,8 +292,7 @@
                 <div class="mobile-menu-handle"></div>
                 <article class="content charts-morris-page">
                     <div class="title-block">
-                        <h3 class="title"> Charts Morris </h3>
-                        <p class="title-description"> List of sample charts with custom colors </p>
+                        <h3 class="title"> Biểu đồ thống kê  </h3>
                     </div>
                     <section class="section">
                         <div class="row">
@@ -301,7 +300,7 @@
                                 <div class="card">
                                     <div class="card-block">
                                         <div class="card-title-block">
-                                            <h3 class="title"> Area Chart Example </h3>
+                                            <h3 class="title"> Sản phẩm tiêu thụ nhiều nhất</h3>
                                         </div>
                                         <section class="example">
                                             <div id="morris-area-chart"></div>
@@ -313,7 +312,7 @@
                                 <div class="card">
                                     <div class="card-block">
                                         <div class="card-title-block">
-                                            <h3 class="title"> Bar Chart Example </h3>
+                                            <h3 class="title"> Doanh thu </h3>
                                         </div>
                                         <section class="example">
                                             <div id="morris-bar-chart"></div>
@@ -329,19 +328,7 @@
                                 <div class="card">
                                     <div class="card-block">
                                         <div class="card-title-block">
-                                            <h3 class="title"> Line Chart Example </h3>
-                                        </div>
-                                        <section class="example">
-                                            <div id="morris-line-chart"></div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-block">
-                                        <div class="card-title-block">
-                                            <h3 class="title"> Donut Chart Example </h3>
+                                            <h3 class="title"> Phương thức thanh toán</h3>
                                         </div>
                                         <section class="example">
                                             <div id="morris-donut-chart"></div>
@@ -357,7 +344,7 @@
                                 <div class="card">
                                     <div class="card-block">
                                         <div class="card-title-block">
-                                            <h3 class="title"> Simple one line Example </h3>
+                                            <h3 class="title"> Trung bình độ tuổi khách hàng</h3>
                                         </div>
                                         <section class="example">
                                             <div id="morris-one-line-chart"></div>
@@ -368,77 +355,6 @@
                         </div>
                     </section>
                 </article>
-                <div class="modal fade" id="modal-media">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Media Library</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    <span class="sr-only">Close</span>
-                                </button>
-                            </div>
-                            <div class="modal-body modal-tab-container">
-                                <ul class="nav nav-tabs modal-tabs" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#gallery" data-toggle="tab" role="tab">Gallery</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#upload" data-toggle="tab" role="tab">Upload</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content modal-tab-content">
-                                    <div class="tab-pane fade" id="gallery" role="tabpanel">
-                                        <div class="images-container">
-                                            <div class="row"> </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade active in" id="upload" role="tabpanel">
-                                        <div class="upload-container">
-                                            <div id="dropzone">
-                                                <form action="/" method="POST" enctype="multipart/form-data" class="dropzone needsclick dz-clickable" id="demo-upload">
-                                                    <div class="dz-message-block">
-                                                        <div class="dz-message needsclick"> Drop files here or click to upload. </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Insert Selected</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-                <!-- /.modal -->
-                <div class="modal fade" id="confirm-modal">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">
-                                    <i class="fa fa-warning"></i> Alert</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Are you sure want to do this?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-                <!-- /.modal -->
             </div>
         </div>
         <!-- Reference block for JS -->

@@ -5,15 +5,14 @@ var $ref = $("#ref");
 
 // Configure responsive bootstrap toolkit
 config.ResponsiveBootstrapToolkitVisibilityDivs = {
-    'xs': $('<div class="device-xs 				  hidden-sm-up"></div>'),
+    'xs': $('<div class="device-xs hidden-sm-up"></div>'),
     'sm': $('<div class="device-sm hidden-xs-down hidden-md-up"></div>'),
     'md': $('<div class="device-md hidden-sm-down hidden-lg-up"></div>'),
     'lg': $('<div class="device-lg hidden-md-down hidden-xl-up"></div>'),
-    'xl': $('<div class="device-xl hidden-lg-down			  "></div>'),
+    'xl': $('<div class="device-xl hidden-lg-down"></div>'),
 };
 
 ResponsiveBootstrapToolkit.use('Custom', config.ResponsiveBootstrapToolkitVisibilityDivs);
-
 //validation configuration
 config.validations = {
 	debug: true,
@@ -165,19 +164,15 @@ $(function() {
     var loginValidationSettings = {
 	    rules: {
 	        username: {
-	            required: true,
-	            email: true
+	            required: true
 	        },
-	        password: "required",
-	        agree: "required"
+	        password: "required"
 	    },
 	    messages: {
 	        username: {
-	            required: "Please enter username",
-	            email: "Please enter a valid email address"
+	            required: "Yêu cầu nhập email/username"
 	        },
-	        password:  "Please enter password",
-	        agree: "Please accept our policy"
+	        password:  "Yêu càu nhập password"
 	    },
 	    invalidHandler: function() {
 			animate({
@@ -191,94 +186,6 @@ $(function() {
 
     $('#login-form').validate(loginValidationSettings);
 })
-//SignupForm validation
-$(function() {
-	if (!$('#signup-form').length) {
-        return false;
-    }
-
-    var signupValidationSettings = {
-	    rules: {
-	    	firstname: {
-	    		required: true,
-	    	},
-	    	lastname: {
-	    		required: true,
-	    	},
-	        email: {
-	            required: true,
-	            email: true
-	        },
-	        password: {
-				required: true,
-				minlength: 8
-	        },
-	        retype_password: {
-				required: true,
-				minlength: 8,
-				equalTo: "#password"
-			},
-			agree: {
-				required: true,
-			}
-	    },
-	    groups: {
-	    	name: "firstname lastname",
-			pass: "password retype_password",
-		},
-		errorPlacement: function(error, element) {
-			if (
-				element.attr("name") == "firstname" || 
-				element.attr("name") == "lastname" 
-			) {
-				error.insertAfter($("#lastname").closest('.row'));
-				element.parents("div.form-group")
-				.addClass('has-error');
-			} 
-			else if (
-				element.attr("name") == "password" || 
-				element.attr("name") == "retype_password" 
-			) {
-				error.insertAfter($("#retype_password").closest('.row'));
-				element.parents("div.form-group")
-				.addClass('has-error');
-			}
-			else if (element.attr("name") == "agree") {
-				error.insertAfter("#agree-text");
-			}
-			else {
-				error.insertAfter(element);
-			}
-		},
-	    messages: {
-	    	firstname: "Please enter firstname and lastname",
-	    	lastname: "Please enter firstname and lastname",
-	        email: {
-	            required: "Please enter email",
-	            email: "Please enter a valid email address"
-	        },
-	        password: {
-	        	required: "Please enter password fields.",
-	        	minlength: "Passwords should be at least 8 characters."
-	        },
-	        retype_password: {
-	        	required: "Please enter password fields.",
-	        	minlength: "Passwords should be at least 8 characters."
-	        },
-	        agree: "Please accept our policy"
-	    },
-	    invalidHandler: function() {
-			animate({
-				name: 'shake',
-				selector: '.auth-container > .card'
-			});
-		}
-	}
-
-	$.extend(signupValidationSettings, config.validations);
-
-    $('#signup-form').validate(signupValidationSettings);
-});
 //ResetForm validation
 $(function() {
 	if (!$('#reset-form').length) {
@@ -288,14 +195,12 @@ $(function() {
     var resetValidationSettings = {
 	    rules: {
 	        email1: {
-	            required: true,
-	            email: true
+	            required: true
 	        }
 	    },
 	    messages: {
 	        email1: {
-	            required: "Please enter email address",
-	            email: "Please enter a valid email address"
+	            required: "Vui lòng điền email hoặc tên đăng nhập"
 	        }
 	    },
 	    invalidHandler: function() {
@@ -311,46 +216,24 @@ $(function() {
     $('#reset-form').validate(resetValidationSettings);
 })
 $(function() {
-
 	$(".wyswyg").each(function() {
-
 		var $editor = $(this).find(".editor");
 		var $toolbar = $(this).find(".toolbar");
-
 		var editor = new Quill($editor.get(0), {
 			theme: 'snow',
-			// modules: {
-			// 	toolbar: toolbarOptions
-			// }
 			modules: {
 				toolbar: $toolbar.get(0)
 			}
 		});
-
-		// var $toolbar = $(this).find(".toolbar");
-		// var $editor = $(this).find(".editor");
-
-
-		// var editor = new Quill($editor.get(0), {
-		// 	theme: 'snow'
-		// });
-
-		// editor.addModule('toolbar', {
-		// 	container: $toolbar.get(0)     // Selector for toolbar container
-		// });
-
-
 
 	});
 
 });
 
 $(function () {
-
 	$('#sidebar-menu, #customize-menu').metisMenu({
 		activeClass: 'open'
 	});
-
 
 	$('#sidebar-collapse-btn').on('click', function(event){
 		event.preventDefault();
@@ -446,9 +329,9 @@ $(function() {
 
         Morris.Donut({
             element: 'morris-donut-chart',
-            data: [{ label: "Download Sales", value: 12 },
-                { label: "In-Store Sales", value: 30 },
-                { label: "Mail-Order Sales", value: 20 } ],
+            data: [{ label: "Ví điện tử", value: 12 },
+                { label: "Chuyển khoản", value: 30 },
+                { label: "Tiền mặt", value: 20 } ],
             resize: true,
             colors: [
                 tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
@@ -1089,9 +972,9 @@ $(function() {
 
         Morris.Donut({
             element: 'dashboard-sales-breakdown-chart',
-            data: [{ label: "Download Sales", value: 12 },
-                { label: "In-Store Sales", value: 30 },
-                { label: "Mail-Order Sales", value: 20 } ],
+            data: [{ label: "Ví điện tử", value: 12 },
+                { label: "Chuyển khoản", value: 30 },
+                { label: "Tiền mặt", value: 20 } ],
             resize: true,
             colors: [
                 tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
@@ -1241,60 +1124,21 @@ var modalMedia = {
 		}
 	}
 };
-// Animating dropdowns is temporary disabled
-// Please feel free to send a pull request :)
-
-// $(function() {
-// 	$('.nav-profile > li > a').on('click', function() {
-// 		var $el = $(this).next();
-
-
-// 		animate({
-// 			name: 'flipInX',
-// 			selector: $el
-// 		});
-// 	});
-// })
 
 $(function () {
 
 	// Local storage settings
 	var themeSettings = getThemeSettings();
 
-	// Elements
-
 	var $app = $('#app');
 	var $styleLink = $('#theme-style');
 	var $customizeMenu = $('#customize-menu');
 
-	// Color switcher
 	var $customizeMenuColorBtns = $customizeMenu.find('.color-item');
 
-	// Position switchers
 	var $customizeMenuRadioBtns = $customizeMenu.find('.radio');
 
-
-	// /////////////////////////////////////////////////
-
-	// Initial state
-
-	// On setting event, set corresponding options
-
-	// Update customize view based on options
-
-	// Update theme based on options
-
-	/************************************************
-	*				Initial State
-	*************************************************/
-
 	setThemeSettings();
-
-	/************************************************
-	*					Events
-	*************************************************/
-
-	// set theme type
 	$customizeMenuColorBtns.on('click', function() {
 		themeSettings.themeName = $(this).data('theme');
 
@@ -1416,7 +1260,6 @@ $(function() {
 	$("body").addClass("loaded");
 
 });
-
 
 /***********************************************
 *        NProgress Settings
