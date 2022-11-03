@@ -19135,5 +19135,83 @@ a.text-dark:focus {
 .brown {
   background: brown;
 }
+.dropdown .p-4{
+  padding: 1.5rem!important;
+}
+.mb-2, .my-2 {
+  margin-bottom: .5rem!important;
+}
+.omni-selection {
+  width: 100%;
+}
+.omni-selection .selection-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e3e9ed;
+  color: #212121;
+  font-size: 14px;
+  padding: 10px;
+  height: 40px;
+  border-radius: 4px;
+  line-height: 18px;
+  width: 100%;
+  transition: all .2s ease-out;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+.omni-selection .selection-icon, .omni-selection .selection-value {
+  margin: 0;
+  padding: 0;
+}
+.omni-text-line-1 {
+  -webkit-line-clamp: 1;
+}
+.omni-text {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.omni-selection .selection-icon {
+  margin-left: 5px;
+}
+.omni-svg-create.svg-next-icon, .omni-svg-create.svg-next-icon svg {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
 
+.omni-svg-create.svg-next-icon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: unset;
+}
+.svg-color-gray-solid {
+  fill: #999;
+}
+.svg-next-icon-size-12 {
+  width: 12px;
+  height: 12px;
+}
+.svg-next-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+}
+.omni-svg-create.svg-color-gray-solid svg {
+  fill: #999;
+}
+
+.omni-svg-create.svg-next-icon-size-12 svg {
+  width: 12px;
+  height: 12px;
+}
 /*# sourceMappingURL=bootstrap.css.map */
