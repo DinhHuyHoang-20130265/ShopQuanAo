@@ -13,7 +13,7 @@
     <style>
         .input-group-btn {
             display: flex;
-          }
+        }
     </style>
     <!-- Theme initialization -->
     <script>
@@ -315,6 +315,49 @@
                                                 <i class="fa fa-close icon"></i>Xoá sản phẩm</a>
                                         </div>
                                     </div>
+                                    <div class="action dropdown">
+                                        <button class="btn  btn-sm rounded-s btn-secondary dropdown-toggle"
+                                            type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"> Thêm điều kiện lọc </button>
+                                        <div class="p-4 dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <div class="mb-2">Hiển thị tất cả sản phẩm theo:</div>
+                                            <div class="trigger omni-selection"><span>
+                                                    <div class=" selection-content ">
+                                                        <p class="selection-value">
+                                                            <span class="omni-text omni-text-line-1"
+                                                                title="Tình trạng hiển thị">Tình trạng hiển thị</span>
+                                                        </p>
+                                                        <p class="selection-icon">
+                                                            <span class="omni-svg-create svg-next-icon svg-color-gray-solid svg-next-icon-size-12">
+                                                                <svg width="12" height="12">
+                                                                </svg>
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                            <div class="mt-3">Là</div>
+                                            <div class="trigger omni-selection mt-2 select-menu-outer_min_width"><span>
+                                                    <div class=" selection-content ">
+                                                        <p class="selection-value"><span
+                                                                class="omni-text  omni-text-line-1"
+                                                                title="Hiển thị">Hiển thị</span></p>
+                                                        <p class="selection-icon"><span
+                                                                class="omni-svg-create svg-next-icon svg-color-gray-solid svg-next-icon-size-12"><svg
+                                                                    width="12" height="12"></svg></span></p>
+                                                    </div>
+                                                </span></div>
+                                            <div class="group-filter-button d-flex">
+                                                <div class="group-filter-button__delete mr-3"><button
+                                                        class="btn btn-default mt-3 btn-hover-oapcity"><span>Hủy</span></button>
+                                                </div>
+                                                <div
+                                                    class="group-filter-button__add flex-grow-1 d-flex justify-content-end">
+                                                    <button class="btn btn-primary mt-3"><span>Thêm điều kiện
+                                                            lọc</span></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </h3>
                             </div>
                         </div>
@@ -392,7 +435,7 @@
                         <li class="page-item active">
                             <a class="page-link" id="page" href="#"> 1 </a>
                         </li>
-                            <a class="page-link" href="javascript:nextPage()" id="btn_next"> Kế tiếp </a>
+                        <a class="page-link" href="javascript:nextPage()" id="btn_next"> Kế tiếp </a>
                         </li>
                     </ul>
                 </nav>
@@ -452,7 +495,7 @@
     <script>
         var current_page = 1;
         var records_per_page = 6;
-        
+
         var objJson = $.parseJSON(`[
         {
             "id": "1",
@@ -554,17 +597,15 @@
             "subimglink": "men/10-a.jpg, men/10-b.jpg, men/10-c.jpg",
             "size": "L, XL"
         }]`);
-        
-        function prevPage()
-        {
+
+        function prevPage() {
             if (current_page > 1) {
                 current_page--;
                 changePage(current_page);
             }
         }
-        
-        function nextPage()
-        {
+
+        function nextPage() {
             if (current_page < numPages()) {
                 current_page++;
                 changePage(current_page);
@@ -573,31 +614,30 @@
         function init() {
             var $itemActions = $(".item-actions-dropdown");
 
-            $(document).on('click',function(e) {
+            $(document).on('click', function (e) {
                 if (!$(e.target).closest('.item-actions-dropdown').length) {
                     $itemActions.removeClass('active');
                 }
             });
-            
-            $('.item-actions-toggle-btn').on('click',function(e){
+
+            $('.item-actions-toggle-btn').on('click', function (e) {
                 e.preventDefault();
                 var $thisActionList = $(this).closest('.item-actions-dropdown');
                 $itemActions.not($thisActionList).removeClass('active');
                 $thisActionList.toggleClass('active');
             });
         }
-        function changePage(page)
-        {
+        function changePage(page) {
             var btn_next = document.getElementById("btn_next");
             var btn_prev = document.getElementById("btn_prev");
             var list = document.getElementById("appendItem");
             var page_span = document.getElementById("page");
             if (page < 1) page = 1;
             if (page > numPages()) page = numPages();
-        
+
             list.innerHTML = "";
-        
-            for (var i = (page-1) * records_per_page; i < (page * records_per_page) && i < objJson.length; i++) {
+
+            for (var i = (page - 1) * records_per_page; i < (page * records_per_page) && i < objJson.length; i++) {
                 list.innerHTML += ` <li class="item">
                     <div class="item-row">
                         <div class="item-col fixed item-col-check">
@@ -675,29 +715,28 @@
                 init()
             }
             page_span.innerHTML = page;
-        
+
             if (page == 1) {
                 btn_prev.style.visibility = "hidden";
             } else {
                 btn_prev.style.visibility = "visible";
             }
-        
+
             if (page == numPages()) {
                 btn_next.style.visibility = "hidden";
             } else {
                 btn_next.style.visibility = "visible";
             }
         }
-        
-        function numPages()
-        {
+
+        function numPages() {
             return Math.ceil(objJson.length / records_per_page);
         }
-        
-        window.onload = function() {
+
+        window.onload = function () {
             changePage(1);
         };
-        
+
         function getRandomDate() {
             const maxDate = Date.now();
             const timestamp = Math.floor(Math.random() * maxDate);
