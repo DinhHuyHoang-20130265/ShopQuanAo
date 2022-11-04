@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="./css/vendor.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <!-- Theme initialization -->
     <script>
         var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
             {};
@@ -142,11 +143,11 @@
                     </div>
                     <nav class="menu">
                         <ul class="sidebar-menu metismenu" id="sidebar-menu">
-                            <li class="active">
+                            <li>
                                 <a href="index.html">
                                     <i class="fa fa-home"></i> Tổng quan </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="">
                                     <i class="fa fa-th-large"></i> Quản Lý Đối Tượng
                                     <i class="fa arrow"></i>
@@ -289,196 +290,234 @@
             <div class="sidebar-overlay" id="sidebar-overlay"></div>
             <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
             <div class="mobile-menu-handle"></div>
-            <article class="content dashboard-page">
-                <section class="section">
-                    <div class="row sameheight-container">
-                        <div class="col col-12 col-sm-12 col-md-6 col-xl-5 stats-col">
-                            <div class="card sameheight-item stats" data-exclude="xs">
-                                <div class="card-block">
-                                    <div class="title-block">
-                                        <h4 class="title"> Số liệu thống kê </h4>
+            <article class="content item-editor-page">
+                <div class="title-block">
+                    <h3 class="title"> Thêm/sửa thông tin người dùng
+                        <span class="sparkline bar" data-type="bar"></span>
+                    </h3>
+                </div>
+                <form name="item">
+                    <div class="card card-block">
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label text-xs-right"> Tên người dùng: </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control boxed" placeholder="Nhập tên">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label text-xs-right"> Email: </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control boxed" placeholder="Nhập email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label text-xs-right"> Tên đăng nhập: </label>
+                            <div class="col-sm-10">
+                                <input type="text" style="width:200px" class="form-control boxed" placeholder="Nhập username">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label text-xs-right"> Password: </label>
+                            <div class="col-sm-10">
+                                <input type="password" style="width:200px" class="form-control boxed" placeholder="Nhập password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ: </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control boxed" placeholder="Nhập...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label text-xs-right"> Ảnh đại diện: </label>
+                            <div class="col-sm-10">
+                                <div class="images-container">
+                                    <div class="image-container">
+                                        <div class="controls">
+                                            <a href="" class="control-btn move">
+                                                <i class="fa fa-arrows"></i>
+                                            </a>
+                                            <a href="" class="control-btn star">
+                                                <i class="fa"></i>
+                                            </a>
+                                            <a href="#" class="control-btn remove" data-toggle="modal"
+                                                data-target="#confirm-modal">
+                                                <i class="fa fa-trash-o"></i>
+                                            </a>
+                                        </div>
+                                        <div class="image"
+                                            style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')"></div>
                                     </div>
-                                    <div class="row row-sm stats-container">
-                                        <div class="col-12 col-sm-6 stat-col">
-                                            <div class="stat-icon">
-                                                <i class="fa fa-rocket"></i>
-                                            </div>
-                                            <div class="stat">
-                                                <div class="value"> 5407 </div>
-                                                <div class="name"> Sản phẩm hoạt động </div>
-                                            </div>
-                                            <div class="progress stat-progress">
-                                                <div class="progress-bar" style="width: 75%;"></div>
+                                    <a href="#" class="add-image" data-toggle="modal" data-target="#modal-media">
+                                        <div class="image-container new">
+                                            <div class="image">
+                                                <i class="fa fa-plus"></i>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-6 stat-col">
-                                            <div class="stat-icon">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </div>
-                                            <div class="stat">
-                                                <div class="value"> 78464 </div>
-                                                <div class="name"> Sản phẩm đã bán</div>
-                                            </div>
-                                            <div class="progress stat-progress">
-                                                <div class="progress-bar" style="width: 25%;"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6  stat-col">
-                                            <div class="stat-icon">
-                                                <i class="fa fa-line-chart"></i>
-                                            </div>
-                                            <div class="stat">
-                                                <div class="value"> $80.560 </div>
-                                                <div class="name"> Doanh thu tháng này</div>
-                                            </div>
-                                            <div class="progress stat-progress">
-                                                <div class="progress-bar" style="width: 60%;"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6  stat-col">
-                                            <div class="stat-icon">
-                                                <i class="fa fa-users"></i>
-                                            </div>
-                                            <div class="stat">
-                                                <div class="value"> 359 </div>
-                                                <div class="name"> Tài khoản người dùng </div>
-                                            </div>
-                                            <div class="progress stat-progress">
-                                                <div class="progress-bar" style="width: 34%;"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6  stat-col">
-                                            <div class="stat-icon">
-                                                <i class="fa fa-list-alt"></i>
-                                            </div>
-                                            <div class="stat">
-                                                <div class="value"> 20 </div>
-                                                <div class="name"> Bài báo tin tức </div>
-                                            </div>
-                                            <div class="progress stat-progress">
-                                                <div class="progress-bar" style="width: 49%;"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 stat-col">
-                                            <div class="stat-icon">
-                                                <i class="fa fa-dollar"></i>
-                                            </div>
-                                            <div class="stat">
-                                                <div class="value"> $780.064 </div>
-                                                <div class="name"> Tổng doanh thu </div>
-                                            </div>
-                                            <div class="progress stat-progress">
-                                                <div class="progress-bar" style="width: 15%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-12 col-sm-12 col-md-6 col-xl-7 history-col">
-                            <div class="card sameheight-item" data-exclude="xs" id="dashboard-history">
-                                <div class="card-header card-header-sm bordered">
-                                    <div class="header-block">
-                                        <h3 class="title">Lịch sử ghé thăm</h3>
-                                    </div>
-                                </div>
-                                <div class="card-block">
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active fade show" id="visits">
-                                            <p class="title-description"> Trung bình số người dùng ghé thăm trang web trong vòng 30 ngày </p>
-                                            <div id="dashboard-visits-chart"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <button type="submit" class="btn btn-primary"> Lưu </button>
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="section">
-                    <div class="row sameheight-container">
-                        <div class="col-xl-8">
-                            <div class="card sameheight-item items" data-exclude="xs,sm,lg">
-                                <div class="card-header bordered">
-                                    <div class="header-block">
-                                        <h3 class="title"> Sản phẩm bán chạy </h3>
-                                        <a href="item-editor.html" class="btn btn-primary btn-sm"> Thêm sản phẩm</a>
-                                    </div>
-                                    <div class="header-block pull-right">
-                                        <label class="search">
-                                            <input class="search-input" placeholder="Tìm...">
-                                            <i class="fa fa-search search-icon"></i>
-                                        </label>
-                                        <div class="pagination">
-                                            <div class="loadmore" id="loadMore">
-                                                <a style="cursor: pointer;" class="btn btn-primary btn-sm loadmore-btn">
-                                                    <i class="fa fa-angle-down"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="item-list striped" id="items">
-                                    <li class="item item-list-header">
-                                        <div class="item-row">
-                                            <div class="item-col item-col-header fixed item-col-img xs"></div>
-                                            <div class="item-col item-col-header item-col-title">
-                                                <div>
-                                                    <span>Tên</span>
-                                                </div>
-                                            </div>
-                                            <div class="item-col item-col-header item-col-sales">
-                                                <div>
-                                                    <span>Đã bán</span>
-                                                </div>
-                                            </div>
-                                            <div class="item-col item-col-header">
-                                                <div>
-                                                    <span>Tồn kho</span>
-                                                </div>
-                                            </div>
-                                            <div class="item-col item-col-header item-col-date">
-                                                <div>
-                                                    <span>Ngày thêm</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-4">
-                            <div class="card sameheight-item sales-breakdown" data-exclude="xs,sm,lg">
-                                <div class="card-header">
-                                    <div class="header-block">
-                                        <h3 class="title">Phương thức thanh toán  </h3>
-                                    </div>
-                                </div>
-                                <div class="card-block">
-                                    <div class="dashboard-sales-breakdown-chart" id="dashboard-sales-breakdown-chart">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </form>
             </article>
+            <div class="modal fade" id="modal-media">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Thư viện ảnh</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Đóng</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-tab-container">
+                            <ul class="nav nav-tabs modal-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#gallery" data-toggle="tab" role="tab">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#upload" data-toggle="tab" role="tab">Upload</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content modal-tab-content">
+                                <div class="tab-pane fade" id="gallery" role="tabpanel">
+                                    <div class="images-container">
+                                        <div class="row">
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                                                <div class="image-container">
+                                                    <div class="image"
+                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg')">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade active in" id="upload" role="tabpanel">
+                                    <div class="upload-container">
+                                        <div id="dropzone">
+                                            <form action="/" method="POST" enctype="multipart/form-data"
+                                                class="dropzone needsclick dz-clickable" id="demo-upload">
+                                                <div class="dz-message-block">
+                                                    <div class="dz-message needsclick"> Drop files here or click to
+                                                        upload. </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Insert Selected</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
             <!-- /.modal -->
             <div class="modal fade" id="confirm-modal">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title">
-                                <i class="fa fa-warning"></i> Alert
+                                <i class="fa fa-warning"></i> Lưu ý
                             </h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Are you sure want to do this?</p>
+                            <p>Bạn có muốn thực hiện hành động này?</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Có</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->
@@ -511,164 +550,25 @@
         ga('create', 'UA-80463319-4', 'auto');
         ga('send', 'pageview');
     </script>
-    <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/vendor.js"></script>
     <script src="js/app.js"></script>
     <script>
-        function getRandomDate() {
-            const maxDate = Date.now();
-            const timestamp = Math.floor(Math.random() * maxDate);
-            var d = new Date(timestamp);
-            return d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
-        }
-        $(document).ready(function() {
-            var object = $.parseJSON(`[
-            {
-                "id": "1",
-                "name": "Áo len sọc lớn màu",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/1.jpg",
-                "colors": "black, green, orange",
-                "subimglink": "men/1-a.jpg, men/1-b.jpg, men/1-c.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "2",
-                "name": "Áo len sọc phối màu",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/2.jpg",
-                "colors": "brown, orange",
-                "subimglink": "men/2-a.jpg, men/2-b.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "3",
-                "name": "Áo len traffic",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/3.jpg",
-                "colors": "brown, green, brown cream",
-                "subimglink": "men/3-a.jpg, men/3-b.jpg, men/3-c.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "4",
-                "name": "Áo len nhiều màu",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/4.jpg",
-                "colors": "black, grey, blue, brown, white",
-                "subimglink": "men/4-a.jpg, men/4-b.jpg, men/4-c.jpg, men/4-d.jpg, men/4-e.jpg  ",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "5",
-                "name": "Áo len phối màu",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/5.jpg",
-                "colors": "black, brown",
-                "subimglink": "men/5-a.jpg, men/5-b.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "6",
-                "name": "Áo sweate nam",
-                "price": "450000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/6.jpg",
-                "colors": "cream, black ,blue, yellow",
-                "subimglink": "men/6-a.jpg, men/6-b.jpg, men/6-c.jpg, men/6-d.jpg ",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "7",
-                "name": "Áo polo nam - Up to you",
-                "price": "365000",
-                "categories": "đồ nam, áo thun nam, áo thun polo nam",
-                "imglink": "men/7.jpg",
-                "colors": "black, blue, green",
-                "subimglink": "men/7-a.jpg, men/7-b.jpg, men/7-c.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "8",
-                "name": "Áo polo nam - Simple day",
-                "price": "345000",
-                "categories": "đồ nam, áo thun nam, áo thun polo nam",
-                "imglink": "men/8.jpg",
-                "colors": "black, blue, pink, yellow",
-                "subimglink": "men/8-a.jpg, men/8-b.jpg, men/8-c.jpg, men/8-d.jpg ",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "9",
-                "name": "Áo polo M1ATP01205BSFSO",
-                "price": "295000",
-                "categories": "đồ nam, áo thun nam, áo thun polo nam",
-                "imglink": "men/9.jpg",
-                "colors": "black, blue, yellow, red",
-                "subimglink": "men/9-a.jpg, men/9-b.jpg, men/9-c.jpg, men/9-d.jpg ",
-                "size": "L, XL, 2XL"
-            },
-            {
-                "id": "10",
-                "name": "Áo polo M1ATP01204BSFSO",
-                "price": "295000",
-                "categories": "đồ nam, áo thun nam, áo thun polo nam",
-                "imglink": "men/10.jpg",
-                "colors": "black, grey, green",
-                "subimglink": "men/10-a.jpg, men/10-b.jpg, men/10-c.jpg",
-                "size": "L, XL"
-            }]`);
-            function initRender() {
-                var listProducts = object.map(function(element) {
-                        return `<li class="item blogBox moreBox" style="display:none">
-                        <div class="item-row">
-                            <div class="item-col fixed item-col-img xs">
-                                <a href="">
-                                    <div class="item-img xs rounded">
-                                        <img src="../assets/imgProduct/images/${element.imglink}" width=30px height=30px></img>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="item-col item-col-title no-overflow">
-                                <div>
-                                    <h4 class="item-title no-wrap"> ${element.name} </h4>
-                                </div>
-                            </div>
-                            <div class="item-col item-col-sales">
-                                <div class="item-heading">Đã bán</div>
-                                <div> ${Math.floor(Math.random() * 10000)} </div>
-                            </div>
-                            <div class="item-col item-col-stats">
-                                <div class="item-heading">Tồn kho</div>
-                                <div class="no-overflow">
-                                    <div class="item-stats" data-type="bar"> ${Math.floor(Math.random() * 100)}</div>
-                                </div>
-                            </div>
-                            <div class="item-col item-col-date">
-                                <div class="item-heading">Ngày thêm</div>
-                                <div> ${getRandomDate()} </div>
-                            </div>
-                        </div>
-                    </li>`
-                })
-                var renderList = listProducts.join('');
-                $('#items').append(renderList);
-            }
-            initRender();
-            function defaultLoadmore() {
-                $(".moreBox").slice(0, 6).show();
-                $("#loadMore").click(function (e) {
-                  e.preventDefault();
-                  $(".moreBox:hidden").slice(0, 6).show();
-                  $(".col-xl-8").css({"overflow":"auto"})
-                });
-              }
-            defaultLoadmore();
+        $('.foo').click(function () {
+            $(this).toggleClass('active');
+        })
+        $('.size').click(function () {
+            $(this).toggleClass('active');
+        })
+    </script>
+    <script>
+        $('.form-control').on('change', function () {
+            if ($(this).val() == 'other') {
+                $(this).after('<input placeholder="Nhập..." type="text" name="' + $(this).attr('name') + '" class="otherInput form-control boxed" style="width:50% !important; margin-top:5px;border: 1px solid #ced4da;border-radius: 0.25rem;"/>');
+            } else {
+                if ($(this).next().is('input.otherInput')) {
+                    $(this).next().remove();
+                };
+            };
         });
     </script>
 </body>
