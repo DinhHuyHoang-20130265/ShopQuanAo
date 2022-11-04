@@ -1,0 +1,44 @@
+/* tab */
+.tablink {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 20%;
+  }
+  .tablink:hover {
+    background-color: rgb(218, 218, 218);
+  }
+  .tabcontent {
+    color: black;
+    display: none;
+    padding: 80px;
+    height: 400px;
+  }
+.box{
+    display: flex;
+    width: 100%;
+  }
+  .box1 {
+    margin-left: 30px;
+    width: 300px;
+    height :130px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+  }
+  .butt1{
+    margin: 15px;
+    padding: 10px;
+    font-size: 15px;
+    color:aqua;  
+    border:1px solid black; 
+    text-align: center;
+  }
+  #binhluan {background-color: rgb(255, 255, 255) ;}
+  #danhgia {background-color:rgb(255, 255, 255);}
+  #mota {background-color:rgb(255, 255, 255);}
