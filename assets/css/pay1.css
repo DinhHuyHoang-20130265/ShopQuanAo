@@ -11,23 +11,13 @@
   .codebutt{
     margin: 5px 0;
     font-size: 15px;
-    width: 20%;
-    
+    width: 20%; 
   }
-  .btnsale,.btnbuy{
-    padding: 7px 10px;
-    display: block;
-    margin: 5px 15px;
-    height: 40px;
-    width: 80%;
-    font-size: 14px;
+  .selection-pay{
+    padding: 5px 15px;
   }
-  .btnbuy{
-    background-color: rgb(136, 20, 20);
-    color: white;
+  .selection-btn{
+    font-size: 16px;
+    font-weight: 400;
   }
-  .btnsale{
-    background-color: #000;
-    color: white;
-    border: none;
-  }
+  
