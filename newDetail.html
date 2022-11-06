@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="./assets/css/login.css">
   <link rel="stylesheet" href="./assets/css/reponsive1.css">
   <link rel="stylesheet" href="./assets/css/menu-contact.css">
+  <link rel="stylesheet" href="./assets/css/newDetail.css">
   <link rel="icon" href="./assets/img/logo/main.png" type="image/x-icon" />
 </head>
 <style>
@@ -713,6 +714,115 @@
             </div>
         </div>
     </div>
+    <!-- comment -->
+    <div class="container">
+      <div class="col-md-12" id="fbcomment">
+        <div class="header_comment">
+          <div class="row">
+            <div class="col-md-6 text-left">
+              <span class="count_comment">30 bình luận</span>
+            </div>
+            <div class="col-md-6 text-right">
+              <span class="sort_title">Sắp xếp theo</span>
+              <select class="sort_by">
+              <option>Mới nhất</option>
+              <option>Cũ nhất</option>
+              </select>
+            </div>
+          </div>
+        </div>
+  
+        <div class="body_comment">
+          <div class="row">
+            <div class="avatar_comment col-md-1">
+              <img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg" alt="avatar"/>
+            </div>
+            <div class="box_comment col-md-11">
+              <textarea class="commentar" placeholder="Viết bình luận..."></textarea>
+              <div class="box_post">
+              <div class="pull-left">
+                <input type="checkbox" id="post_fb"/>
+                <label for="post_fb">Đăng lên facebook</label>
+              </div>
+              <div class="pull-right">
+                <span>
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg" alt="avatar" />
+                <i class="fa fa-caret-down"></i>
+                </span>
+                <button onclick="submit_comment()" type="button" value="1">Đăng</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <ul id="list_comment" class="col-md-12">
+              <!-- Start List Comment 1 -->
+              <li class="box_result row">
+                <div class="avatar_comment col-md-1">
+                  <img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg" alt="avatar"/>
+                </div>
+                <div class="result_comment col-md-11">
+                  <h4>Nguyễn Huy Hiệp</h4>
+                  <p>Đôi giày này thật tuyệt vời, tôi sẽ mua 2 đôi để tặng bạn thân nhất nhân dịp sinh nhật sắp tới của bạn tôi</p>
+                  <div class="tools_comment">
+                    <a class="like" href="#">Thích</a>
+                    <span aria-hidden="true"> · </span>
+                    <a class="replay" href="#">Phản hồi</a>
+                    <span aria-hidden="true"> · </span>
+                    <i class="fa fa-thumbs-o-up"></i> <span class="count">1</span> 
+                    <span aria-hidden="true"> · </span>
+                    <span>26m</span>
+                  </div>
+                  <ul class="child_replay">
+                    <li class="box_reply row">
+                      <div class="avatar_comment col-md-1">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg" alt="avatar"/>
+                      </div>
+                       <div class="result_comment col-md-11">
+                        <h4>Nguyễn Minh Hiếu</h4>
+                        <p>Rất ủng hộ bạn, tôi cũng vừa tặng cho đứa bạn tôi 1 đôi, nó cực kỳ thích luôn</p>
+                        <div class="tools_comment">
+                          <a class="like" href="#">Thích</a>
+                          <span aria-hidden="true"> · </span>
+                          <a class="replay" href="#">Phản hồi</a>
+                          <span aria-hidden="true"> · </span>
+                          <i class="fa fa-thumbs-o-up"></i> <span class="count">1</span> 
+                          <span aria-hidden="true"> · </span>
+                          <span>5m</span>
+                        </div>
+                        <ul class="child_replay"></ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+               <!-- Start List Comment 2 -->
+               <li class="box_result row">
+                <div class="avatar_comment col-md-1">
+                  <img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg" alt="avatar"/>
+                </div>
+                <div class="result_comment col-md-11">
+                  <h4>Đinh Huy Hoàng</h4>
+                  <p>Tuyệt vời</p>
+                  <div class="tools_comment">
+                    <a class="like" href="#">Thích</a>
+                    <span aria-hidden="true"> · </span>
+                    <a class="replay" href="#">Phản hồi</a>
+                    <span aria-hidden="true"> · </span>
+                    <i class="fa fa-thumbs-o-up"></i> <span class="count">1</span> 
+                    <span aria-hidden="true"> · </span>
+                    <span>26m</span>
+                  </div>
+                  <ul class="child_replay"></ul>
+                </div>
+              </li>
+            </ul>
+          <button class="show_more" type="button">Tải thêm 10 bình luận</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- comment -->
    <!-- footer -->
   <footer class="footer">
     <div class="container">
