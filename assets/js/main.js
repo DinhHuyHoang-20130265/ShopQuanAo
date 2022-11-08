@@ -27,7 +27,6 @@ function changeImg(id) {
     document.getElementById('img-main').setAttribute('src', imgPath);
 }
 function check() {
-
     var type = document.getElementsByName("mau");
     if (type[0].checked) {
         var val = type[0].value;
@@ -41,7 +40,6 @@ function check() {
         var val = type[2].value;
         console.log(val);
     }
-
 }
 $(document).ready(function () {
     if ($(window).width() < 739) {
