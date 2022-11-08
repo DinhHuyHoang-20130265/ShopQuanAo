@@ -68,22 +68,26 @@
     .img-item img {
       width: 80px;
     }
+
     .sale-off-2 {
       top: 14px;
       right: 34px;
     }
   }
+
   @media (max-width: 768px) {
     .tablink {
-      width:120px;
+      width: 120px;
     }
   }
+
   /* tablet */
   @media (min-width: 740px) and (max-width: 1023px) {
     .sale-off-2 {
       top: 0px;
       right: 15px;
     }
+
     .daonguoc {
       display: flex;
       flex-direction: column-reverse;
@@ -142,10 +146,12 @@
     .card:hover .hover-icon {
       display: none;
     }
+
     .sale-off-2 {
       top: 0px !important;
       right: 25px;
-  }
+    }
+
     .daonguoc {
       display: flex;
       flex-direction: column-reverse;
@@ -929,6 +935,9 @@
                   <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
                     <i class="fas fa-cart-plus"></i>
                   </a>
+                  <a href="./cart.html" class="btn-add-to-cart" title="Đưa vào trang ưu thích" style="margin-top: 10px">
+                    <i class="fas fa-heart"></i>
+                  </a>
                   <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
                     <i class="fas fa-search"></i>
                   </a>
@@ -977,6 +986,9 @@
                   <input type="hidden" />
                   <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
                     <i class="fas fa-cart-plus"></i>
+                  </a>
+                  <a href="./cart.html" class="btn-add-to-cart" title="Đưa vào trang ưu thích" style="margin-top: 10px">
+                    <i class="fas fa-heart"></i>
                   </a>
                   <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
                     <i class="fas fa-search"></i>
@@ -1027,6 +1039,9 @@
                   <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
                     <i class="fas fa-cart-plus"></i>
                   </a>
+                  <a href="./cart.html" class="btn-add-to-cart" title="Đưa vào trang ưu thích" style="margin-top: 10px">
+                    <i class="fas fa-heart"></i>
+                  </a>
                   <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
                     <i class="fas fa-search"></i>
                   </a>
@@ -1076,6 +1091,9 @@
                   <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
                     <i class="fas fa-cart-plus"></i>
                   </a>
+                  <a href="./cart.html" class="btn-add-to-cart" title="Đưa vào trang ưu thích" style="margin-top: 10px">
+                    <i class="fas fa-heart"></i>
+                  </a>
                   <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
                     <i class="fas fa-search"></i>
                   </a>
@@ -1121,6 +1139,118 @@
     </div>
   </div>
   <!-- end  product relate to-->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="mb-2 main-img-2">
+                <img src="./assets/imgProduct/images/men/1.jpg" alt="" id="img-main" />
+              </div>
+              <ul class="all-img-2">
+                <li class="img-item-2">
+                  <img src="./assets/imgProduct/images/men/1.jpg" alt="" onclick="changeImg('one')" id="one" />
+                </li>
+                <li class="img-item-2">
+                  <img src="./assets/imgProduct/images/men/1-a.jpg" alt="" onclick="changeImg('two')" id="two" />
+                </li>
+                <li class="img-item-2">
+                  <img src="./assets/imgProduct/images/men/1-b.jpg" alt="" onclick="changeImg('three')" id="three" />
+                </li>
+                <li class="img-item-2">
+                  <img src="./assets/imgProduct/images/men/1-c.jpg" alt="" onclick="changeImg('four')" id="four" />
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <div class="info-product">
+                <h3 class="product-name">
+                  <a href="" title="">Áo len sọc lớn màu</a>
+                </h3>
+                <div class="status-product">Trạng thái: <b>Còn hàng</b></div>
+                <div class="infor-oder">Loại sản phẩm: <b>Đồ Nam</b></div>
+                <div class="price-product">
+                  <div class="special-price">
+                    <span>540.000đ</span>
+                  </div>
+                  <div class="price-old">
+                    Giá gốc:
+                    <del>650.000đ</del>
+                    <span class="discount">(-20%)</span>
+                  </div>
+                </div>
+                <div class="product-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ducimus vero quibusdam adipisci
+                  dolore id veritatis tempore ipsa obcaecati alias libero, minus sequi nam corrupti esse nulla eum,
+                  similique deleniti?
+                </div>
+                <div class="product__color d-flex" style="align-items: center">
+                  <div class="title" style="font-size: 16px; margin-right: 10px">
+                    Màu:
+                  </div>
+                  <div class="select-swap d-flex">
+                    <div class="circlecheck">
+                      <input type="radio" id="f-option" class="circle-1" name="selector" checked />
+                      <label for="f-option"></label>
+                      <div class="outer-circle"></div>
+                    </div>
+                    <div class="circlecheck">
+                      <input type="radio" id="g-option" class="circle-2" name="selector" />
+                      <label for="g-option"></label>
+                      <div class="outer-circle"></div>
+                    </div>
+                    <div class="circlecheck">
+                      <input type="radio" id="h-option" class="circle-3" name="selector" />
+                      <label for="h-option"></label>
+                      <div class="outer-circle"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product__size d-flex" style="align-items: center">
+                  <div class="title" style="font-size: 16px; margin-right: 10px">
+                    Kích thước:
+                  </div>
+                  <div class="select-swap">
+                    <div class="swatch-element" data-value="38">
+                      <input type="radio" class="variant-1" id="swatch-1-38" name="mau" value="trung"
+                        onclick="check()" />
+                      <label for="swatch-1-38" class="sd"><span>38</span></label>
+                    </div>
+                    <div class="swatch-element" data-value="39">
+                      <input type="radio" class="variant-1" id="swatch-1-39" name="mau" value="thanh"
+                        onclick="check()" />
+                      <label for="swatch-1-39" class="sd"><span>39</span></label>
+                    </div>
+                    <div class="swatch-element" data-value="40">
+                      <input type="radio" class="variant-1" id="swatch-1-40" name="mau" value="hieu"
+                        onclick="check()" />
+                      <label for="swatch-1-40" class="sd"><span>40</span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="product__wrap">
+                  <div class="product__amount">
+                    <label for="">Số lượng: </label>
+                    <input type="button" value="-" class="control" onclick="tru()" />
+                    <input type="text" value="1" class="text-input" id="text_so_luong" onkeypress="validate(event)" />
+                    <input type="button" value="+" class="control" onclick="cong()" />
+                  </div>
+                </div>
+                <div class="product__shopnow">
+                  <button class="shopnow2">Mua ngay</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-default btn-close" data-dismiss="modal">
+          <i class="fas fa-times-circle"></i>
+        </button>
+      </div>
+    </div>
+  </div>
   <!-- footer -->
   <footer class="footer">
     <div class="container">
@@ -1270,12 +1400,11 @@
         <h4>Thêm vào giỏ hàng</h4>
       </div>
       <div class="alert__body">
-        <img src="./assets/img/product/addidas1.jpg" alt="" class="alert__body-img">
+        <img src="./assets/imgProduct/images/men/1.jpg" alt="" class="alert__body-img">
         <div>
           <h5 class="alert__body-name"></h5>
-
           <span class="alert__body-amount">Số lượng: 1</span>
-          <h6 class="alert__body-price">2.000.000 VNĐ</h6>
+          <h6 class="alert__body-price">420.000 VNĐ</h6>
         </div>
       </div>
       <div class="alert__footer">
@@ -1289,13 +1418,12 @@
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/google-fonts-css2-main/dist/umd/index.min.js"></script>
     <script src="./assets/floating-ui-1.12.5/dist/umd/popper.min.js"></script>
-    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/zoomsl.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script>
       $(document).ready(function () {
         $(".big-img").imagezoomsl({
           zoomrange: [3, 3]
-
         });
       });
     </script>

@@ -80,6 +80,9 @@ $(document).ready(async function () {
                         <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
                           <i class="fas fa-cart-plus"></i>
                         </a>
+                        <a href="./cart.html" class="btn-add-to-cart" title="Đưa vào trang ưu thích" style="margin-top: 10px">
+                                <i class="fas fa-heart"></i>
+                        </a>
                         <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
                           <i class="fas fa-search"></i>
                         </a>
@@ -143,6 +146,9 @@ $(document).ready(async function () {
                           <input type="hidden">
                           <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
                             <i class="fas fa-cart-plus"></i>
+                          </a>
+                          <a href="./cart.html" class="btn-add-to-cart" title="Đưa vào trang ưu thích" style="margin-top: 10px">
+                                <i class="fas fa-heart"></i>
                           </a>
                           <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
                             <i class="fas fa-search"></i>
@@ -257,6 +263,9 @@ $(document).ready(async function () {
                       <input type="hidden">
                       <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
                         <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a href="./cart.html" class="btn-add-to-cart" title="Đưa vào trang ưu thích" style="margin-top: 10px">
+                                <i class="fas fa-heart"></i>
                       </a>
                       <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
                         <i class="fas fa-search"></i>
