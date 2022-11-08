@@ -27,7 +27,6 @@ function changeImg(id) {
     document.getElementById('img-main').setAttribute('src', imgPath);
 }
 function check() {
-
     var type = document.getElementsByName("mau");
     if (type[0].checked) {
         var val = type[0].value;
@@ -41,7 +40,6 @@ function check() {
         var val = type[2].value;
         console.log(val);
     }
-
 }
 $(document).ready(function () {
     if ($(window).width() < 739) {
@@ -87,8 +85,9 @@ $(document).ready(function () {
         $('.overlay').toggleClass('hidden');
     })
     // click thông tin đơn hàng trang pay
-    $('.summary').click(function () {
+    $('.summary-heading-price').click(function () {
         $('.summary-content').toggle('slow');
+        $('.summary-heading-price h4 i').toggleClass('dropdown');
     })
 })
 function hienthi(id, name) {

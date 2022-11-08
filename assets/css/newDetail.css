@@ -1,34 +1,104 @@
 /* comment */
-@media (max-width: 768px) {
-    #fbcomment {
-     padding-left: 0px !important;
-     padding-right: 0px !important;
-    }
-    .result_comment {
-     padding-left: 20px!important;
-     padding-right: 20px!important;
-     margin-top: -45px;
-     margin-left: 60px;
-    }
- }
-@media (max-width: 991px) {
-   #fbcomment {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+@media (max-width: 450px) and (min-width: 0px){
+  #fbcomment {
+   padding-left: 0px!important;
+   padding-right: 0px!important;
+  }
+  .result_comment {
+   padding-left: 20px!important;
+   padding-right: 20px!important;
+   margin-top: -50px;
+   margin-left: 60px;
+  }
+  .box_comment {
+    width: 81%;
+    margin-left: 80px;
+    margin-top: -50px!important;
+    margin-right: 15px!important;
+   }
+   .body_comment .show_more {
+    margin-right: 30px;
+    margin-left: 30px;
+   }
+}
+@media (max-width: 574px) and (min-width: 451px){
+  #fbcomment {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
    }
    .result_comment {
     padding-left: 20px!important;
+    padding-right: 20px!important;
+    margin-top: -50px;
+    margin-left: 60px;
+   }
+   .box_comment {
+    max-width: 82%;
+    margin-left: 80px;
+    margin-top: -50px!important;
+    margin-right: 15px!important;
+   }
+   .body_comment .show_more {
+    margin-right: 30px;
+    margin-left: 30px;
    }
 }
-@media (min-width: 992px) {
-    #fbcomment {
-     padding-left: 0px !important;
-     padding-right: 0px !important;
-    }
-    .result_comment {
-     padding-left: 0px!important;
-    }
+
+@media (max-width: 767px) and (min-width: 575px){
+  #fbcomment {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+   }
+   .result_comment {
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+    margin-top: -50px;
+    margin-left: 60px;
+   }
+   .box_comment {
+    max-width: 82%;
+    margin-left: 80px;
+    margin-top: -50px!important;
+    margin-right: -20px!important;
+   }
+   .body_comment .show_more {
+    margin-right: 30px;
+    margin-left: 30px;
+   }
+  
+}
+@media (max-width: 991px) and (min-width: 768px) {
+ #fbcomment {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
  }
+ .result_comment {
+  padding-left: 20px!important;
+  padding-right: 20px!important;
+  margin-top: -50px;
+  margin-left: 60px;
+ }
+ .box_comment {
+  margin-left: 20px;
+  max-width: 87%;
+ }
+ .body_comment .show_more {
+  margin-right: 30px;
+  margin-left: 30px;
+ }
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+.result_comment {
+  padding-left: 20px!important;
+  padding-right: 20px!important;
+  margin-top: -50px;
+  margin-left: 60px;
+ }
+ .body_comment .show_more {
+  margin-right: 30px;
+  margin-left: 30px;
+ }
+}
 .content-page p {
     text-align: left !important;
     margin-bottom: -10px !important;

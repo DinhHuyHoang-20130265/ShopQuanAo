@@ -62,47 +62,60 @@
 
   /* tablet */
   @media (min-width: 740px) and (max-width: 991px) {
-    .summary-content.hidden .col-6{
+    .summary-content.hidden .col-6 {
       max-width: 50% !important;
       justify-content: normal;
     }
-    .summary-content.hidden .col-6 img{
+
+    .summary-content.hidden .col-6 img {
       width: 150px;
     }
-    .summary-content.hidden .col-6.col-8{
+
+    .summary-content.hidden .col-6.col-8 {
       justify-content: end;
       right: 20px;
     }
-    .summary-content.hidden .col-6.col-8 h5{
+
+    .summary-content.hidden .col-6.col-8 h5 {
       margin-bottom: 0;
       margin-right: 125px;
     }
-    .summary-content.hidden .col-6 .notice{
+
+    .summary-content.hidden .col-6 .notice {
       left: 152px;
     }
   }
 
   /* mobile */
   @media (max-width: 739px) {
-    .summary-content.hidden .col-6{
+    .summary-content.hidden .col-6 {
       max-width: 50% !important;
       justify-content: normal;
     }
-    .summary-content.hidden .col-6 img{
+
+    .summary-content.hidden .col-6 img {
       width: 150px;
     }
-    .summary-content.hidden .col-6.col-8{
+
+    .summary-content.hidden .col-6.col-8 {
       justify-content: end;
       right: 20px;
     }
-    .summary-content.hidden .col-6.col-8 h5{
+
+    .summary-content.hidden .col-6.col-8 h5 {
       margin-bottom: 0;
       margin-right: 125px;
     }
-    .summary-content.hidden .col-6 .notice{
+
+    .summary-content.hidden .col-6 .notice {
       left: 152px;
     }
   }
+  .summary-heading-price .dropdown{
+    rotate: -90deg;
+    transition: transform 0.4s;
+  }
+
 </style>
 
 <body>
@@ -598,7 +611,7 @@
                   <h4>Thông tin đơn hàng</h4>
                 </div>
                 <div class="summary-heading-price">
-                  <h4>840.000<i class="fas fa-chevron-down" style="margin-left: 20px;margin-right: 5px;"></i></h4>
+                  <h4>840.000<i class="fas fa-chevron-down" style="margin-left: 20px;margin-right: 5px;transform:rotate(90deg);transition: transform 0.4s;"></i></h4>
                 </div>
               </div>
               <div class="summary-content hidden">
@@ -642,6 +655,27 @@
                         <div class="col-6 text-right"><span>870,000₫</span></div>
                       </div>
                     </div>
+                    <div class="salecode">
+                      <div class="row row-sliderbar-footer">
+                        <div class="col-6"><span>Nhập mã ưu đãi:</span></div>
+                        <textarea class="sale_code form-control" placeholder="Nhập vào nếu có"></textarea>
+                        <button class="codebutt">Áp Dụng</button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="selection-pay">
+                      <div class="selection-pay-title">
+                        <h2>Chọn hình thức thanh toán</h2>
+                      </div>
+                      <div class="selection-btn">
+                        <input type="radio" id="cash" name="select-btn" value="cash">
+                        <label for="pay-in-cash"> Thanh toán bằng tiền mặt khi nhận hàng(COD)</label><br>
+                        <input type="radio" id="visa" name="select-btn" value="visa">
+                        <label for="pay-in-visa"> Thanh toán bằng thẻ Visa</label><br>
+                        <input type="radio" id="bank" name="select-btn" value="bank">
+                        <label for="pay-in-bank"> Thanh toán bằng thẻ ngân hàng</label><br>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -662,7 +696,8 @@
                       <img src="./assets/img/product/noavatar.png" alt="" width="60px" height="60px">
                     </div>
                     <div class="main-customer-info-logged">
-                      <p class="main-customer-info-logged-paragraph">Đăng nhập để được hỗ trợ tốt hơn và có thể theo dõi đơn hàng</p>
+                      <p class="main-customer-info-logged-paragraph">Đăng nhập để được hỗ trợ tốt hơn và có thể theo dõi
+                        đơn hàng</p>
                       <a href="">Đăng nhập ngay</a>
                     </div>
                   </div>
@@ -684,7 +719,7 @@
                     </div>
                     <div class="fieldset-phone form-group">
                       <label for="tinhtp" class="form-label" for="">Tỉnh/Thành Phố</label>
-                      <select id="tinhtp" type="text" class="form-control"> 
+                      <select id="tinhtp" type="text" class="form-control">
                         <option value="tinh_tp">Chọn Tỉnh/ thành phố</option>
                         <option value="254">Hà Nội</option>
                         <option value="255">Hồ Chí Minh</option>
@@ -754,19 +789,20 @@
                     </div>
                     <div class="fieldset-phone form-group">
                       <label for="quanhuyen" class="form-label" for="">Quận/Huyện</label>
-                      <select id="quanhuyen" type="text" class="form-control"> 
+                      <select id="quanhuyen" type="text" class="form-control">
                         <option value="quan_huyen">Chọn Quận/Huyện</option>
                       </select>
                       <span class="form-message"></span>
                     </div>
                     <div class="fieldset-phone form-group">
                       <label for="phuongxa" class="form-label" for="">Phường/Xã</label>
-                      <select id="phuongxa" type="text" class="form-control"> 
+                      <select id="phuongxa" type="text" class="form-control">
                         <option value="phuong_xa">Chọn Phường/Xã</option>
                       </select>
                       <span class="form-message"></span>
                     </div>
-                    <textarea id="textbox" type="text" class="form-control" placeholder="Ghi chú đơn hàng...."></textarea>
+                    <textarea id="textbox" type="text" class="form-control"
+                      placeholder="Ghi chú đơn hàng...."></textarea>
                   </div>
                 </div>
                 <div class="main-footer">
@@ -832,24 +868,24 @@
                   </div>
                   <div class="salecode">
                     <div class="row row-sliderbar-footer">
-                    <div class="col-6"><span>Nhập mã ưu đãi:</span></div>
-                    <textarea class="sale_code form-control" placeholder="Nhập vào nếu có"></textarea>
-                    <button class="codebutt">Áp Dụng</button>
+                      <div class="col-6"><span>Nhập mã ưu đãi:</span></div>
+                      <textarea class="sale_code form-control" placeholder="Nhập vào nếu có"></textarea>
+                      <button class="codebutt">Áp Dụng</button>
                     </div>
                   </div>
                   <hr>
                   <div class="selection-pay">
-                  <div class="selection-pay-title">
-                    <h2>Chọn hình thức thanh toán</h2>
-                  </div>
-                  <div class="selection-btn"> 
-                  <input type="radio" id="cash" name="select-btn" value="cash">
-                    <label for="pay-in-cash"> Thanh toán bằng tiền mặt khi nhận hàng(COD)</label><br>
-                  <input type="radio" id="visa" name="select-btn" value="visa">
-                    <label for="pay-in-visa"> Thanh toán bằng thẻ Visa</label><br>
-                  <input type="radio" id="bank" name="select-btn" value="bank">
-                    <label for="pay-in-bank"> Thanh toán bằng thẻ ngân hàng</label><br>
-                  </div>
+                    <div class="selection-pay-title">
+                      <h2>Chọn hình thức thanh toán</h2>
+                    </div>
+                    <div class="selection-btn">
+                      <input type="radio" id="cash" name="select-btn" value="cash">
+                      <label for="pay-in-cash"> Thanh toán bằng tiền mặt khi nhận hàng(COD)</label><br>
+                      <input type="radio" id="visa" name="select-btn" value="visa">
+                      <label for="pay-in-visa"> Thanh toán bằng thẻ Visa</label><br>
+                      <input type="radio" id="bank" name="select-btn" value="bank">
+                      <label for="pay-in-bank"> Thanh toán bằng thẻ ngân hàng</label><br>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -865,20 +901,20 @@
     <div class="container">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="flexbox-alignItems-center">
-            <div class="emailWrp">
-                <h7 class="title-footer">Đăng kí nhận khuyến mãi</h7>
-                <form class="form-subrice" action="">
-                    <input type="text" placeholder="Nhập vào email của bạn" name="q" class="subcrible">
-                    <button type="submit" class="findButton">Gửi</button>
-                </form>
-            </div>
-            <div class="subWrp">
-                <h7 class="title-footer">Tra cứu đơn hàng của bạn</h7>
-                <form class="form-subrice" action="">
-                    <input type="text" placeholder="Nhập SĐT hoặc Mã số đơn hàng" name="q" class="subcrible">
-                    <button type="submit" class="findButton">TÌM</button>
-                </form>
-            </div>
+          <div class="emailWrp">
+            <h7 class="title-footer">Đăng kí nhận khuyến mãi</h7>
+            <form class="form-subrice" action="">
+              <input type="text" placeholder="Nhập vào email của bạn" name="q" class="subcrible">
+              <button type="submit" class="findButton">Gửi</button>
+            </form>
+          </div>
+          <div class="subWrp">
+            <h7 class="title-footer">Tra cứu đơn hàng của bạn</h7>
+            <form class="form-subrice" action="">
+              <input type="text" placeholder="Nhập SĐT hoặc Mã số đơn hàng" name="q" class="subcrible">
+              <button type="submit" class="findButton">TÌM</button>
+            </form>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -982,11 +1018,11 @@
   <!-- end footer -->
   <!--contact menu-->
   <div class="fab-wrapper">
-    <input id="fabCheckbox" type="checkbox" class="fab-checkbox"/>
+    <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
     <label class="fab1" for="fabCheckbox">
-        <span class="fab-dots fab-dots-1"></span>
-        <span class="fab-dots fab-dots-2"></span>
-        <span class="fab-dots fab-dots-3"></span>
+      <span class="fab-dots fab-dots-1"></span>
+      <span class="fab-dots fab-dots-2"></span>
+      <span class="fab-dots fab-dots-3"></span>
     </label>
     <div class="fab-wheel">
       <a href="#" class="fab-action fab-action-1">
@@ -1003,36 +1039,31 @@
       </a>
     </div>
     <!--end contact menu-->
-  <script src="./assets/js/jquery-3.6.1.min.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
-  <script src="./assets/google-fonts-css2-main/dist/umd/index.min.js"></script>
-  <script src="./assets/floating-ui-1.12.5/dist/umd/popper.min.js"></script>
-  <script src="./assets/js/validator.js"></script>
-  <script src="./assets/js/main.js"></script>
-  <script>
-    Validator({
-      form: '#form-2',
-      formGroupSelector: '.form-group',
-      errorSelector: '.form-message',
-      rules: [
-        Validator.isRequired('#hoten', 'Vui lòng nhập tên đầy đủ'),
-        Validator.isRequired('#sdt'),
-        Validator.isRequired('#diachi'),
-        Validator.isEmail('#email'),
-        Validator.isRequired('#password'),
-        Validator.minLength('#password', 6),
-        Validator.isRequired('#password_confirmation'),
-        // Validator.isRequired('input[name="gender"]'),
-        // Validator.isConfirmed('#password_confirmation', function(){
-        //   return document.querySelector('#form-1 #password').value;
-        // }, 'Mật khẩu nhập lại không chính xác')
-      ],
-      onSubmit: function (data) {
-        // call api
-        console.log(data);
-      }
-    });
-  </script>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/google-fonts-css2-main/dist/umd/index.min.js"></script>
+    <script src="./assets/floating-ui-1.12.5/dist/umd/popper.min.js"></script>
+    <script src="./assets/js/validator.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+      Validator({
+        form: '#form-2',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#hoten', 'Vui lòng nhập tên đầy đủ'),
+          Validator.isRequired('#sdt'),
+          Validator.isRequired('#diachi'),
+          Validator.isEmail('#email'),
+          Validator.isRequired('#password'),
+          Validator.minLength('#password', 6),
+          Validator.isRequired('#password_confirmation'),
+        ],
+        onSubmit: function (data) {
+          console.log(data);
+        }
+      });
+    </script>
 </body>
 
 </html>
