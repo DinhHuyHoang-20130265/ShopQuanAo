@@ -85,8 +85,9 @@ $(document).ready(function () {
         $('.overlay').toggleClass('hidden');
     })
     // click thông tin đơn hàng trang pay
-    $('.summary').click(function () {
+    $('.summary-heading-price').click(function () {
         $('.summary-content').toggle('slow');
+        $('.summary-heading-price h4 i').toggleClass('dropdown');
     })
 })
 function hienthi(id, name) {
