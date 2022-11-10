@@ -111,11 +111,11 @@
       left: 152px;
     }
   }
-  .summary-heading-price .dropdown{
+
+  .summary-heading-price .dropdown {
     rotate: -90deg;
     transition: transform 0.4s;
   }
-
 </style>
 
 <body>
@@ -611,7 +611,9 @@
                   <h4>Thông tin đơn hàng</h4>
                 </div>
                 <div class="summary-heading-price">
-                  <h4>840.000<i class="fas fa-chevron-down" style="margin-left: 20px;margin-right: 5px;transform:rotate(90deg);transition: transform 0.4s;"></i></h4>
+                  <h4>840.000<i class="fas fa-chevron-down"
+                      style="margin-left: 20px;margin-right: 5px;transform:rotate(90deg);transition: transform 0.4s;"></i>
+                  </h4>
                 </div>
               </div>
               <div class="summary-content hidden">
@@ -623,7 +625,10 @@
                         <span class="notice">1</span>
                       </div>
                       <div class="col-6 col-8">
-                        <h5>Áo len sọc lớn màu</h5>
+                        <h5 class="cart-name" style="display: flex;align-items: center;">Áo len sọc lớn màu
+                          <div class="foo light_blue"></div>
+                          <p class="size_choosed" style="font-size: 12px;">XL</p>
+                        </h5>
                         <span>420,000₫</span>
                       </div>
                     </div>
@@ -633,7 +638,10 @@
                         <span class="notice">1</span>
                       </div>
                       <div class="col-6 col-8">
-                        <h5>Áo len sọc phối màu</h5>
+                        <h5 class="cart-name" style="display: flex;align-items: center;">Áo len sọc phối màu
+                          <div class="foo red"></div>
+                          <p class="size_choosed" style="font-size: 12px;">S</p>
+                        </h5>
                         <span>420,000₫</span>
                       </div>
                     </div>
@@ -830,7 +838,9 @@
                       <span class="notice">1</span>
                     </div>
                     <div class="col-6">
-                      <h5>Áo len sọc lớn màu</h5>
+                      <h5 class="cart-name" style="margin-bottom: 0;">Áo len sọc lớn màu</h5>
+                      <div class="foo light_blue"></div>
+                      <p class="size_choosed" style="font-size: 12px;">XL</p>
                     </div>
                     <div class="col-2">
                       <span>420,000₫</span>
@@ -842,7 +852,9 @@
                       <span class="notice">1</span>
                     </div>
                     <div class="col-6">
-                      <h5>Áo len sọc phối màu</h5>
+                      <h5 class="cart-name" style="margin-bottom: 0;">Áo len sọc phối màu</h5>
+                      <div class="foo red"></div>
+                      <p class="size_choosed" style="font-size: 12px;">S</p>
                     </div>
                     <div class="col-2">
                       <span>420,000₫</span>
