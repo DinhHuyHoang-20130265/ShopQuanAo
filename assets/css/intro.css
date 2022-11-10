@@ -1,0 +1,74 @@
+.title-head{
+    text-align: center;
+}
+.page-title{
+    max-width: 588px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.h2-title{
+    border-left: 4px solid aqua;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    padding-left: 12px;
+}
+  .tam-nhin{
+    width: 100%;
+    display: flex;
+}
+.tam-nhin .right{
+    float: right;
+    margin-left: 15px;
+    
+}
+.tam-nhin .left{
+    float: left;
+    
+}
+.button{
+    color: var(--black-color);
+    background-color: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-left: 15px;
+    overflow: hidden; 
+    border:2px solid var(--black-color);
+    transition: color 0.4s linear;
+}
+/* .button:hover{
+    background-color: #777;
+    color: black;
+
+} */
+.su-menh{
+    width: 100%;
+}
+.ctner{
+    
+}
+.sm-container{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px groove #777;
+}
+.sm-container .button{
+    margin: 0;
+}
+.sm-container .right{
+    width: 50%;
+    float: right;
+    /* background-color: #777; */
+}
+.sm-container .left{
+    width: 50%;
+    float: left;
+    /* background-color: #777; */
+}
+.cont-txt{
+    text-align: center;
+    margin: 15px;
+    padding: 50px;
+    font-size: 150%;
+}
