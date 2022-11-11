@@ -1,3 +1,178 @@
+@media (max-width: 335px) and (min-width: 0px){
+    .tam-nhin {
+        display: block!important;
+    }
+    .tam-nhin .left, .tam-nhin .right {
+        float: none!important;
+    }
+
+    .tam-nhin .right img {
+        width: 200px!important;
+        height: 200px!important;
+        margin-top: 20px;
+        margin-left: -15px;
+    }
+    .sm-container {
+        display: block!important;
+        width: 100% !important;
+        margin-top: 20px!important;
+    }
+    .sm-container .left, .sm-container .right {
+        float: none!important;
+        width: 100%!important;
+    }
+
+    .sm-container .right img, .left img {
+        display: none!important;
+    }
+    .sm-container .left .cont-txt, .sm-container .right .cont-txt {
+        display: contents;
+        text-align: left!important;
+        margin: 0px!important;
+        padding: 0px!important;
+    }
+    .h2-title {
+        margin-top: 20px!important;
+    }
+}
+
+@media (max-width: 450px) and (min-width: 335px){
+    .tam-nhin {
+        display: block!important;
+    }
+    .tam-nhin .left, .tam-nhin .right {
+        float: none!important;
+    }
+
+    .tam-nhin .right img {
+        width: 300px!important;
+        height: 300px!important;
+        margin-top: 20px;
+        margin-left: -15px;
+    }
+    .sm-container {
+        display: block!important;
+        width: 100% !important;
+        margin-top: 20px!important;
+    }
+    .sm-container .left, .sm-container .right {
+        float: none!important;
+        width: 100%!important;
+    }
+
+    .sm-container .right img, .left img {
+        display: none!important;
+    }
+    .sm-container .left .cont-txt, .sm-container .right .cont-txt {
+        display: contents;
+        text-align: left!important;
+        margin: 0px!important;
+        padding: 0px!important;
+    }
+    .h2-title {
+        margin-top: 20px!important;
+    }
+  }
+  @media (max-width: 574px) and (min-width: 450px){
+    .tam-nhin {
+        display: block!important;
+    }
+    .tam-nhin .left, .tam-nhin .right {
+        float: none!important;
+    }
+
+    .tam-nhin .right img {
+        width: 400px!important;
+        height: 400px!important;
+        margin-top: 20px;
+        margin-left: -15px;
+    }
+    .sm-container {
+        display: block!important;
+        width: 100% !important;
+        margin-top: 20px!important;
+    }
+    .sm-container .left, .sm-container .right {
+        float: none!important;
+        width: 100%!important;
+    }
+
+    .sm-container .right img, .left img {
+        display: none!important;
+    }
+    .sm-container .left .cont-txt, .sm-container .right .cont-txt {
+        display: contents;
+        text-align: left!important;
+        margin: 0px!important;
+        padding: 0px!important;
+    }
+    .h2-title {
+        margin-top: 20px!important;
+    }
+  }
+  
+  @media (max-width: 767px) and (min-width: 575px){
+    .tam-nhin {
+        display: block!important;
+    }
+    .tam-nhin .left, .tam-nhin .right {
+        float: none!important;
+    }
+
+    .tam-nhin .right img {
+        width: 500px!important;
+        height: 500px!important;
+        margin-top: 20px;
+        margin-left: -15px;
+    }
+    .sm-container {
+        display: block!important;
+        width: 100% !important;
+        margin-top: 20px!important;
+    }
+    .sm-container .left, .sm-container .right {
+        float: none!important;
+        width: 100%!important;
+    }
+
+    .sm-container .right img, .left img {
+        display: none!important;
+    }
+    .sm-container .left .cont-txt, .sm-container .right .cont-txt {
+        display: contents;
+        text-align: left!important;
+        margin: 0px!important;
+        padding: 0px!important;
+    }
+    .h2-title {
+        margin-top: 20px!important;
+    }
+    
+  }
+  @media (max-width: 991px) and (min-width: 768px) {
+    .tam-nhin .right img {
+        width: 250px!important;
+        height: 250px!important;
+    }
+    .sm-container .right img, .left img {
+       width: 300px;
+    }
+    .sm-container .left .cont-txt, .sm-container .right .cont-txt {
+       padding: 0px;
+    }
+  }
+  @media (max-width: 1200px) and (min-width: 992px) {
+    .tam-nhin .right img {
+        width: 350px!important;
+        height: 350px!important;
+    }
+    .sm-container .right img, .left img {
+        width: 400px;
+     }
+     .sm-container .left .cont-txt, .sm-container .right .cont-txt {
+        /* padding: 0px; */
+     }
+  }
 .title-head{
     text-align: center;
 }
