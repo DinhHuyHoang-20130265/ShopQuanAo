@@ -432,6 +432,10 @@
                                                 <a style="cursor: pointer;" class="btn btn-primary btn-sm loadmore-btn">
                                                     <i class="fa fa-angle-down"></i></a>
                                             </div>
+                                            <div class="loadmore" id="loadLess">
+                                                <a style="cursor: pointer;" class="btn btn-primary btn-sm loadmore-btn">
+                                                    <i class="fa fa-angle-up"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -468,7 +472,7 @@
                             <div class="card sameheight-item sales-breakdown" data-exclude="xs,sm,lg">
                                 <div class="card-header">
                                     <div class="header-block">
-                                        <h3 class="title">Phương thức thanh toán  </h3>
+                                        <h3 class="title">Phương thức thanh toán</h3>
                                     </div>
                                 </div>
                                 <div class="card-block">
@@ -676,7 +680,7 @@
                     </li>`
                 })
                 var renderList = listProducts.join('');
-                $('#items').append(renderList);
+                $('#items').html(renderList);
             }
             initRender();
             function defaultLoadmore() {
@@ -686,8 +690,12 @@
                   $(".moreBox:hidden").slice(0, 6).show();
                   $(".col-xl-8").css({"overflow":"auto"})
                 });
-              }
+            }
             defaultLoadmore();
+            $("#loadLess").click(function() {
+                initRender();
+                defaultLoadmore();
+            });
         });
     </script>
 </body>
