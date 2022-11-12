@@ -1722,12 +1722,12 @@ label,
   border-bottom: 1px solid #e9edf0;
 }
 
-.item-list.striped>li:nth-child(2n + 1) {
+.item-list.striped>li {
   background-color: #fcfcfd;
 }
 
 @media (max-width: 767.98px) {
-  .item-list.striped>li:nth-child(2n + 1) {
+  .item-list.striped>li {
     background-color: #f8f9fb;
   }
 }
@@ -2948,9 +2948,11 @@ span a {
   order: -1;
   padding-right: 6px;
 }
-
+.loadmore {
+  margin-right: 5px;
+}
 .dashboard-page .items .card-header .pagination {
-  display: inline-block;
+  display: inline-flex;
   margin: 0;
 }
 
